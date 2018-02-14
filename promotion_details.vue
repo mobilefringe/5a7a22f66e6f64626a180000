@@ -53,7 +53,7 @@
 						</social-sharing>
 					</div>
 					<div class="col-sm-12 no_padding">
-						<img v-lazy="currentPromo.image_url" class="image"/>
+						<img v-if="!_.includes(currentPromo.image_url, 'missing')" v-lazy="currentPromo.image_url" class="image"/>
 						<div class="text-left promo_description">
 							<p v-if="locale=='en-ca'" v-html="currentPromo.rich_description"></p>
 							<p v-else v-html="currentPromo.rich_description_2"></p>
@@ -102,11 +102,11 @@
                     if(this.currentPromo != null) {
                         console.log(this.currentPromo.store);
                         if (this.currentPromo.store != null && this.currentPromo.store != undefined && _.includes(this.currentPromo.store.image_url, 'missing')) {
-                            this.currentPromo.store.image_url = "http://via.placeholder.com/400x400/757575";
+                            this.currentPromo.store.image_url = "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1518554684072/bonniedoonlogo.png";
                         }
                         else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
                             this.currentPromo.store = {};
-                            this.currentPromo.store.image_url =  "http://via.placeholder.com/400x400/757575";
+                            this.currentPromo.store.image_url =  "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1518554684072/bonniedoonlogo.png";
                         }
                         var vm = this;
                         var temp_promo = [];
