@@ -41,7 +41,10 @@ hr{
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Gibson Regular';
+    src: url('//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100//1518627792680/Gibson-Regular.ttf')
+}
 /* COLOUR VARIABLES */
 $primary: #004d71;
 $secondary: #fff;
@@ -70,28 +73,28 @@ body {
 
 
 
-.loading-container {
-    //margin: 20% 0;
-    width:100%;
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    .vue-simple-spinner {
-        border-color: rgb(0, 0, 0) rgb(182, 184, 186) rgb(182, 184, 186) !important;
-    }
-    .vue-simple-spinner-text {
-        margin-top: 24px !important;
-        color: #000 !important;
-        text-transform: uppercase;
-    }
-}
+// .loading-container {
+//     //margin: 20% 0;
+//     width:100%;
+//     margin: auto;
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-align: center;
+//     -ms-flex-align: center;
+//     align-items: center;
+//     -webkit-box-pack: center;
+//     -ms-flex-pack: center;
+//     justify-content: center;
+//     .vue-simple-spinner {
+//         border-color: rgb(0, 0, 0) rgb(182, 184, 186) rgb(182, 184, 186) !important;
+//     }
+//     .vue-simple-spinner-text {
+//         margin-top: 24px !important;
+//         color: #000 !important;
+//         text-transform: uppercase;
+//     }
+// }
 
 img[lazy=loading] {
     width: 100%;
@@ -371,7 +374,7 @@ strong, .bold {
     flex-direction: column;
 }
 
-.content {
+.router_content {
     v-webkit-box-flex: 1;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
@@ -1246,6 +1249,7 @@ strong, .bold {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
+        text-shadow: 2px 1px black;
     }
     h1:after {
         content: " ";
@@ -1326,9 +1330,9 @@ strong, .bold {
     border-radius: 0;
 }
 .ih-item.circle.effect19 .info {
-    background: $accent;
-    opacity:0.7;
-    // background: rgba(255, 72, 0, .7);
+    // background: $accent;
+    // opacity:0.7;
+    background: rgba(125, 192, 162, .7);
     transition: all 0.35s linear;
 }
 .ih-item.circle.effect19 .info .content {
@@ -1964,6 +1968,33 @@ strong, .bold {
         -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
         -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
         -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+        -moz-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+        -moz-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        -moz-backface-visibility: hidden; /* Fix for transition flickering */
+        -o-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+        -o-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        -o-backface-visibility: hidden; /* Fix for transition flickering */
+        -ms-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+        -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+        -ms-backface-visibility: hidden; /* Fix for transition flickering */
+        
+        border: 1px solid #fff;
+        &:hover {
+            filter: none; /* IE6-9 */
+            -webkit-filter: none; /* Chrome 19+ & Safari 6+ */
+            -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+            -webkit-backface-visibility: initial; /* Fix for transition flickering */
+            -moz-filter: none; /* Chrome 19+ & Safari 6+ */
+            -moz-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+            -moz-backface-visibility: initial; /* Fix for transition flickering */
+            -o-filter: none; /* Chrome 19+ & Safari 6+ */
+            -o-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+            -o-backface-visibility: initial; /* Fix for transition flickering */
+            -ms-filter: none; /* Chrome 19+ & Safari 6+ */
+            -ms-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+            -ms-backface-visibility: initial; /* Fix for transition flickering */
+            border: 1px solid $accent;
+        }
     }
     .store_hover {
         max-width: 100%;
@@ -1975,7 +2006,7 @@ strong, .bold {
 }
 
 .store_logo_container:hover {
-    background: $accent;
+    // background: $accent;
     .store_coming_soon {
         background-image: url(//codecloud.cdn.speedyrails.net/sites/59282acb6e6f647d8d520100/image/png/1501873798000/RectangleWhite.png);
     }
@@ -3054,7 +3085,7 @@ gallery:after{
     
 /* Small devices (tablets, 768px and down) */
 @media (max-width: 768px) {
-    .content {
+    .router_content {
         margin-top:49px;
     }
     h1 {
@@ -3110,6 +3141,7 @@ gallery:after{
         z-index: 999;
         text-align: center;
         opacity:1;
+        background-color: #000;
         .top_bar_wrapper {
             padding: 0;
         }
