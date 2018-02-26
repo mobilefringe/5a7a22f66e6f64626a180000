@@ -114,7 +114,8 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'processedStores'
+                    'processedStores',
+                    'hours'
                 ]),
                 banners () {
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
