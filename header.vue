@@ -178,6 +178,9 @@
                     ],
                 }
             },
+            created () {
+                
+            }
             watch: {
                 $route: function() {
                     // hide dropdown when route changes
