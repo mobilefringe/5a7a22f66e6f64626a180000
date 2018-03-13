@@ -50,7 +50,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
     Vue.use(SocialSharing);
-    console.log("main MenuItems", MenuItems);
     /* initialize router */
     const router = new VueRouter({
         mode: 'history',
