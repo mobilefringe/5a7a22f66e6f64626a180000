@@ -44,7 +44,7 @@ require.config({
     }
 });
 
-require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue-simple-spinner','vue!loader.vue', "vue!header.vue", "json!menu_items.json"], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment,SocialSharing, VueSelect, SearchComponent,Spinner, Loader, Header, MenuItems) {
+require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', "vue-meta", "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue-simple-spinner','vue!loader.vue', "vue!header.vue", "json!menu_items.json"], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages,$, moment, Meta, tz, VueMoment,SocialSharing, VueSelect, SearchComponent, Spinner, Loader, Header, MenuItems) {
     Vue.use(Meta);
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
@@ -79,76 +79,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                 dataLoaded: false,
                 show_mobile_menu: false,
                 menu_items: MenuItems,
-                // [
-                //     {
-                //         name: "header.stores",
-                //         href: "/stores",
-                //         sub_menu: [{
-                //                 name: "header.stores",
-                //                 href: "/stores"
-                //             },
-                //             {
-                //                 name: "header.centre_map",
-                //                 href: "/map"
-                //             }
-                //         ]
-                //     },
-                //     {
-                //         name: "header.promos",
-                //         href: "/promotions",
-                //     },
-                //     {
-                //         name: "header.events",
-                //         href: "/events",
-                //     },
-                //     {
-                //         name: "header.guest_services",
-                //         href: "/pages/bonniedoon-services",
-                //         sub_menu: [{
-                //                 name: "header.services ",
-                //                 href: "/pages/bonniedoon-services"
-                //             },
-                //             {
-                //                 name: "header.community",
-                //                 href: "/pages/bonniedoon-community-support"
-                //             },
-                //             {
-                //                 name: "header.green_initiatives",
-                //                 href: "/pages/bonniedoon-green-initiatives"
-                //             },
-                //             {
-                //                 name: "header.gift_card",
-                //                 href: "/pages/bonniedoon-gift-cards"
-                //             }
-                //         ]
-                //     },
-                //     {
-                //         name: "header.contact_us",
-                //         href: "/contact_us",
-                //         sub_menu: [
-                //             {
-                //                 name: "header.contact_us",
-                //                 href: "/contact_us"
-                //             },
-                //             {
-                //                 name: "header.hours",
-                //                 href: "/hours"
-                //             },
-                //             {
-                //                 name: "header.jobs",
-                //                 href: "/jobs"
-                //             },
-                //             {
-                //                 name: "header.find_us",
-                //                 href: "/find_us"
-                //             },
-                //             {
-                //                 name: "header.newsletter",
-                //                 href: "/newsletter"
-                //             }
-                //         ],
-                //     }
-                // ],
                 search_result : null,
                 suggestionAttribute: 'name',
                 newsletter_email: "",
